@@ -13,7 +13,6 @@ routes.delete('/posts/:id', async(req, res)=>{
     const post = await Post.findById(req.params.id);
     
     await post.remove();
-
     return res.send()
 })
 
